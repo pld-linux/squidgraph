@@ -14,6 +14,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Squid Graph is a free, simple, yet powerful Squid v2 native logfile
 analysis tool that generates reports with graphical representation of
 the proxy server's traffic.
+
 %prep
 %setup -q -n squid-graph-%{version}
 
