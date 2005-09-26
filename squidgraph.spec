@@ -1,14 +1,17 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	Squid logfile analyzer and traffic grapher
 Summary(pl):	Program do analizy logów Squida i rysowania wykresów ruchu
 Name:		squidgraph
 Version:	3.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://squid-graph.securlogic.com/files/stable/squid-graph-%{version}.tar.gz
 # Source0-md5:	e9565daabc23599094ed2d0e9a984d5e
 URL:		http://squid-graph.securlogic.com/
-Requires:	perl-GD
+BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-GD
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,4 +39,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc docs/{README,html} images/*
+%doc bin/{apacheconv,generate.cgi,timeconv}
 %attr(754,root,root) %{_bindir}/*
