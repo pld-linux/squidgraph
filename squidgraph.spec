@@ -30,9 +30,9 @@ proxy.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT%{_sbindir}
 
-install bin/squid-graph $RPM_BUILD_ROOT%{_bindir}
+install bin/squid-graph $RPM_BUILD_ROOT%{_sbindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,4 +41,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc docs/{README,html} images/*
 %doc bin/{apacheconv,generate.cgi,timeconv}
-%attr(754,root,root) %{_bindir}/*
+%attr(755,root,root) %{_sbindir}/*
