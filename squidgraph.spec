@@ -9,8 +9,8 @@ Group:		Applications/System
 Source0:	http://squid-graph.securlogic.com/files/stable/squid-graph-%{version}.tar.gz
 # Source0-md5:	e9565daabc23599094ed2d0e9a984d5e
 URL:		http://squid-graph.securlogic.com/
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-GD
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
