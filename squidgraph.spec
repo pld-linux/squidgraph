@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Squid logfile analyzer and traffic grapher
-Summary(pl):	Program do analizy logów Squida i rysowania wykresów ruchu
+Summary(pl.UTF-8):   Program do analizy logÃ³w Squida i rysowania wykresÃ³w ruchu
 Name:		squidgraph
 Version:	3.1
 Release:	2
@@ -19,10 +19,10 @@ Squid Graph is a free, simple, yet powerful Squid v2 native logfile
 analysis tool that generates reports with graphical representation of
 the proxy server's traffic.
 
-%description -l pl
-Squid Graph to wolnodostêpne, proste lecz maj±ce du¿e mo¿liwo¶ci
-narzêdzie do analizy natywnych plików logów Squida 2, generuj±ce
-raporty z graficzn± reprezentacj± ruchu przechodz±cego przez serwer
+%description -l pl.UTF-8
+Squid Graph to wolnodostÄ™pne, proste lecz majÄ…ce duÅ¼e moÅ¼liwoÅ›ci
+narzÄ™dzie do analizy natywnych plikÃ³w logÃ³w Squida 2, generujÄ…ce
+raporty z graficznÄ… reprezentacjÄ… ruchu przechodzÄ…cego przez serwer
 proxy.
 
 %prep
