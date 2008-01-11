@@ -2,13 +2,13 @@
 Summary:	Squid logfile analyzer and traffic grapher
 Summary(pl.UTF-8):	Program do analizy logów Squida i rysowania wykresów ruchu
 Name:		squidgraph
-Version:	3.1
-Release:	2
+Version:	3.2
+Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://squid-graph.securlogic.com/files/stable/squid-graph-%{version}.tar.gz
-# Source0-md5:	e9565daabc23599094ed2d0e9a984d5e
-URL:		http://squid-graph.securlogic.com/
+Source0:	http://dl.sourceforge.net/squid-graph/squid-graph-%{version}.tar.gz
+# Source0-md5:	7ed7d187f87bde1ec9dabe05f07053b5
+URL:		http://squid-graph.sourceforge.net/
 BuildRequires:	perl-GD
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -26,19 +26,18 @@ raporty z graficzną reprezentacją ruchu przechodzącego przez serwer
 proxy.
 
 %prep
-%setup -q -n squid-graph-%{version}
+%setup -q -n squid-graph
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sbindir}
-
-install bin/squid-graph $RPM_BUILD_ROOT%{_sbindir}
+install squid-graph $RPM_BUILD_ROOT%{_sbindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc docs/{README,html} images/*
-%doc bin/{apacheconv,generate.cgi,timeconv}
-%attr(755,root,root) %{_sbindir}/*
+%doc README
+%doc apacheconv generate.cgi timeconv
+%attr(755,root,root) %{_sbindir}/squid-graph
