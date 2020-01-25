@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	Squid logfile analyzer and traffic grapher
 Summary(pl.UTF-8):	Program do analizy logów Squida i rysowania wykresów ruchu
 Name:		squidgraph
